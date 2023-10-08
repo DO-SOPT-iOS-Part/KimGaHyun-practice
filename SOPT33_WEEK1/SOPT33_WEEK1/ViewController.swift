@@ -14,10 +14,16 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loginButton.backgroundColor = UIColor.black  //button 배경 색
+        loginButton.tintColor = UIColor.white    //button 글자 색
+        loginButton.layer.masksToBounds = true   //button 둥글게
+        loginButton.layer.cornerRadius = 8       //button 테두리 반지름 -> 클수록 둥글어짐
     }
 
     @IBAction func emailTextField(_ sender: Any) {
@@ -39,10 +45,6 @@ class ViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         print("\(idText)\n\(passwordText)")
-        sender.backgroundColor = UIColor.black  //button 배경 색
-        sender.tintColor = UIColor.white    //button 글자 색
-        sender.layer.masksToBounds = true   //button 둥글게
-        sender.layer.cornerRadius = 8       //button 테두리 반지름 -> 클수록 둥글어짐
         
         
         pushToResultVC()
