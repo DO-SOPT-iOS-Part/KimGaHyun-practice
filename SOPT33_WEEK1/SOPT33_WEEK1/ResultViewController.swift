@@ -26,10 +26,19 @@ class ResultViewController: UIViewController {
     }
     
     
+    private func emptycheck() {
+        if email == "" || password == "" {
+            let alertController = UIAlertController(title: "ERROR", message: "이메일 또는 비밀번호를 입력하세요.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindText()
-        // Do any additional setup after loading the view.
+        emptycheck()
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -47,14 +56,5 @@ class ResultViewController: UIViewController {
         loginDataCompletion([self.email, self.password])
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
