@@ -11,5 +11,3 @@ import Foundation
 protocol GetDataProtocol {
     func getLoginData(email: String, password: String)
 }
-
-
