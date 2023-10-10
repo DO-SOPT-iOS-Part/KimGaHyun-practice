@@ -10,7 +10,6 @@ import UIKit
 
 class ResultViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    
     @IBOutlet weak var selectInfo: UILabel!
     @IBOutlet weak var pickerInfo: UIPickerView!
     
