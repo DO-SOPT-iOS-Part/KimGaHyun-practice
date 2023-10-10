@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
+    
+    @IBOutlet weak var selectInfo: UILabel!
+    @IBOutlet weak var pickerInfo: UIPickerView!
     
     var loginDataCompletion: (([String]) -> Void)? //스트링 타입의 배열을 매개변수로 전달 할거고, 리턴타입은 void다!
                               
@@ -20,11 +21,14 @@ class ResultViewController: UIViewController {
     var email: String = ""
     var password: String = ""
 
-    private func bindText() {
-        self.emailLabel.text = "email : \(email)"
-        self.passwordLabel.text = "password : \(password)"
-    }
+    let maxselect = 2
+    let pickerViewcnt = 1   //피커뷰 열 1개
+    var pickerinfo = ["email", "password"]  //피커뷰 목록
     
+    func styleLabel() {
+        selectInfo.layer.cornerRadius = 8
+        selectInfo.layer.borderColor = UIColor.systemPink.cgColor
+    }
     
     private func emptycheck() {
         if email == "" || password == "" {
@@ -37,9 +41,28 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bindText()
         emptycheck()
     }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerinfo.count
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return pickerViewcnt
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerinfo[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row == 0 {
+            selectInfo.text = "email : \(email)"
+        }
+        else {
+            selectInfo.text = "password : \(password)"
+        }
+    }
+    
     
     @IBAction func backButton(_ sender: Any) {
         if self.navigationController != nil     //내 navigationCotroller가 존재한다면 => 스택 안에 있음 push를 함
@@ -58,3 +81,7 @@ class ResultViewController: UIViewController {
     
 
 }
+
+
+
+
