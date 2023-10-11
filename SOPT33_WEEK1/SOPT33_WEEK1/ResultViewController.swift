@@ -24,10 +24,18 @@ class ResultViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     let pickerViewcnt = 1   //피커뷰 열 1개
     var pickerinfo = ["email", "password"]  //피커뷰 목록
     
-    func styleLabel() {
-        selectInfo.layer.cornerRadius = 8
-        selectInfo.layer.borderColor = UIColor.systemPink.cgColor
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        emptycheck()
+        setstyle()
     }
+    
+    func setstyle() {
+        selectInfo.font = .systemFont(ofSize: 20, weight: .semibold)
+        selectInfo.textColor = .brown
+    }
+    
     
     private func emptycheck() {
         if email == "" || password == "" {
@@ -37,12 +45,6 @@ class ResultViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             present(alertController, animated: true, completion: nil)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        emptycheck()
-    }
-    
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerinfo.count

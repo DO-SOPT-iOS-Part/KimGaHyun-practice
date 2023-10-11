@@ -20,6 +20,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setstyle()
+    }
+    
+    
+    func setstyle() {
         loginButton.backgroundColor = UIColor.black  //button 배경 색
         loginButton.tintColor = UIColor.white    //button 글자 색
         loginButton.layer.masksToBounds = true   //button 둥글게
