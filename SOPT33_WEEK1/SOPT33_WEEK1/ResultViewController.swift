@@ -20,24 +20,24 @@ class ResultViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var email: String = ""
     var password: String = ""
 
-    let maxselect = 2
-    let pickerViewcnt = 1   //피커뷰 열 1개
+    private let maxselect = 2
+    private let pickerViewcount = 1   //피커뷰 열 1개
     var pickerinfo = ["email", "password"]  //피커뷰 목록
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emptycheck()
-        setstyle()
+        emptyCheck()
+        setStyle()
     }
     
-    func setstyle() {
+    func setStyle() {
         selectInfo.font = .systemFont(ofSize: 20, weight: .semibold)
         selectInfo.textColor = .brown
     }
     
     
-    private func emptycheck() {
+    private func emptyCheck() {
         if email == "" || password == "" {
             let alertController = UIAlertController(title: "ERROR", message: "이메일 또는 비밀번호를 입력하세요.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
@@ -50,7 +50,7 @@ class ResultViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return pickerinfo.count
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return pickerViewcnt
+        return pickerViewcount
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerinfo[row]
