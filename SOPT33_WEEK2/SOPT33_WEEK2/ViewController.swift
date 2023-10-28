@@ -15,30 +15,6 @@ class ViewController: UIViewController {
     let width = UIScreen.main.bounds.width / 2
     
     
-//    private func setLayout() {
-//        [stackView_left, stackView_right].forEach{ [weak self] view in
-//            guard let self else {return}
-//            //view.translatesAutoresizingMaskIntoConstraints = false
-//            //self.view.addSubview(view)
-//            self.view.addSubview(view)
-//
-//        }
-//
-//        //왼쪽 스택뷰
-//        NSLayoutConstraint.activate([stackView_left.topAnchor.constraint(equalTo: view.topAnchor),
-//                                             stackView_left.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//                                             stackView_left.widthAnchor.constraint(equalToConstant: width),
-//                                             stackView_left.heightAnchor.constraint(equalToConstant: height)])
-//
-//        //오른쪽 스택뷰
-//        NSLayoutConstraint.activate([stackView_right.topAnchor.constraint(equalTo: view.topAnchor),
-//                                             stackView_right.leadingAnchor.constraint(equalTo: stackView_left.trailingAnchor),
-//                                             stackView_right.widthAnchor.constraint(equalToConstant: width),
-//                                             stackView_right.heightAnchor.constraint(equalToConstant: height)])
-//
-//
-//    }
-    
     private func setLayout() {
             self.view.addSubview(scrollView)
             scrollView.addSubview(contentView)
