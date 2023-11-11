@@ -19,6 +19,8 @@
 		834960B52AFF591200A78244 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834960B42AFF591200A78244 /* InfoViewController.swift */; };
 		834960B72AFF592300A78244 /* GetInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834960B62AFF592300A78244 /* GetInfoService.swift */; };
 		834960B92AFF593D00A78244 /* UserInfoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834960B82AFF593D00A78244 /* UserInfoDataModel.swift */; };
+		834960BD2AFF6D1100A78244 /* CheckUserNameDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834960BC2AFF6D1100A78244 /* CheckUserNameDataModel.swift */; };
+		834960BF2AFF6DA700A78244 /* CheckUserNameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834960BE2AFF6DA700A78244 /* CheckUserNameService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		834960B42AFF591200A78244 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		834960B62AFF592300A78244 /* GetInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInfoService.swift; sourceTree = "<group>"; };
 		834960B82AFF593D00A78244 /* UserInfoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDataModel.swift; sourceTree = "<group>"; };
+		834960BC2AFF6D1100A78244 /* CheckUserNameDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserNameDataModel.swift; sourceTree = "<group>"; };
+		834960BE2AFF6DA700A78244 /* CheckUserNameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserNameService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,14 +75,16 @@
 				834960942AFF581B00A78244 /* AppDelegate.swift */,
 				834960962AFF581B00A78244 /* SceneDelegate.swift */,
 				834960982AFF581B00A78244 /* ViewController.swift */,
-				8349609D2AFF581C00A78244 /* Assets.xcassets */,
-				834960A22AFF581C00A78244 /* Info.plist */,
 				834960AE2AFF58B800A78244 /* NetworkError.swift */,
 				834960B02AFF58D400A78244 /* RegisterService.swift */,
 				834960B22AFF58EF00A78244 /* RegisterRequestBody.swift */,
 				834960B42AFF591200A78244 /* InfoViewController.swift */,
 				834960B62AFF592300A78244 /* GetInfoService.swift */,
 				834960B82AFF593D00A78244 /* UserInfoDataModel.swift */,
+				8349609D2AFF581C00A78244 /* Assets.xcassets */,
+				834960A22AFF581C00A78244 /* Info.plist */,
+				834960BC2AFF6D1100A78244 /* CheckUserNameDataModel.swift */,
+				834960BE2AFF6DA700A78244 /* CheckUserNameService.swift */,
 			);
 			path = ServerTest;
 			sourceTree = "<group>";
@@ -160,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834960BF2AFF6DA700A78244 /* CheckUserNameService.swift in Sources */,
+				834960BD2AFF6D1100A78244 /* CheckUserNameDataModel.swift in Sources */,
 				834960992AFF581B00A78244 /* ViewController.swift in Sources */,
 				834960AF2AFF58B800A78244 /* NetworkError.swift in Sources */,
 				834960B32AFF58EF00A78244 /* RegisterRequestBody.swift in Sources */,
